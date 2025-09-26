@@ -86,30 +86,30 @@
             <h2 class="text-2xl md:text-3xl font-bold text-red-500 mb-6">Preencha seus Dados</h2>
             <form id="registrationForm" class="space-y-4 md:space-y-6">
                 <div>
-                    <label for="nome" class="block text-sm md:text-base font-medium text-gray-300">Nome Completo</label>
+                    <label for="nome" class="block text-sm md:text-base font-medium text-gray-300">Nome Completo:</label>
                     <input type="text" id="nome" name="nome" required
                            class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
                 </div>
 
                 <div>
-                    <label for="id" class="block text-sm md:text-base font-medium text-gray-300">ID (Discord, Game, etc.)</label>
+                    <label for="id" class="block text-sm md:text-base font-medium text-gray-300">ID:</label>
                     <input type="text" id="id" name="id" required
                            class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
                 </div>
 
                 <div>
-                    <label for="plataforma" class="block text-sm md:text-base font-medium text-gray-300">Plataforma</label>
+                    <label for="plataforma" class="block text-sm md:text-base font-medium text-gray-300">Plataforma:</label>
                     <select id="plataforma" name="plataforma" required
                             class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
                         <option value="">Selecione uma plataforma</option>
-                        <option value="PSN">PSN</option>
+                        <option value="PS5">PS5</option>
                         <option value="XBOX">XBOX</option>
                         <option value="PC">PC</option>
                     </select>
                 </div>
 
                 <div>
-                    <label for="idade" class="block text-sm md:text-base font-medium text-gray-300">Idade</label>
+                    <label for="idade" class="block text-sm md:text-base font-medium text-gray-300">Idade:</label>
                     <select id="idade" name="idade" required
                             class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
                         <option value="">Selecione sua idade</option>
@@ -133,17 +133,17 @@
                 </div>
 
                 <div>
-                    <label for="posicao" class="block text-sm md:text-base font-medium text-gray-300">Posição</label>
+                    <label for="posicao" class="block text-sm md:text-base font-medium text-gray-300">Posição:</label>
                     <select id="posicao" name="posicao" required
                             class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
                         <option value="">Selecione uma posição</option>
-                        <option value="Zagueiros">Zagueiros</option>
-                        <option value="Laterais">Laterais</option>
+                        <option value="Zagueiros">Zagueiro</option>
+                        <option value="Laterais">Lateral</option>
                     </select>
                 </div>
 
                 <div>
-                    <label for="diaDaSemana" class="block text-sm md:text-base font-medium text-gray-300">Dia da Semana</label>
+                    <label for="diaDaSemana" class="block text-sm md:text-base font-medium text-gray-300">Dia da Semana:</label>
                     <select id="diaDaSemana" name="diaDaSemana" required
                             class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
                         <option value="">Selecione um dia</option>
@@ -151,14 +151,11 @@
                         <option value="Terça-feira">Terça-feira</option>
                         <option value="Quarta-feira">Quarta-feira</option>
                         <option value="Quinta-feira">Quinta-feira</option>
-                        <option value="Sexta-feira">Sexta-feira</option>
-                        <option value="Sábado">Sábado</option>
-                        <option value="Domingo">Domingo</option>
                     </select>
                 </div>
 
                 <div>
-                    <label for="horario" class="block text-sm md:text-base font-medium text-gray-300">Horário</label>
+                    <label for="horario" class="block text-sm md:text-base font-medium text-gray-300">Horário:</label>
                     <select id="horario" name="horario" required
                            class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
                         <option value="">Selecione um horário</option>
@@ -179,7 +176,7 @@
 
         <!-- Footer -->
         <footer class="mt-8 text-center text-gray-400">
-            <p class="footer-logo text-sm md:text-base">CONFLITO FC</p>
+            <p class="footer-logo text-sm md:text-base">Desenvolvido por <b>dev.barbosa02@gmail.com</b></p>
         </footer>
     </div>
 
@@ -220,7 +217,7 @@
             // Para grupos, a API oficial do WhatsApp não permite enviar diretamente para um grupo.
             // A forma mais comum é enviar para um número de contato que gerencia as inscrições.
             // Para um link que funciona em celulares e desktops, use a API wa.me.
-            const whatsappLink = `https://wa.me/SEU_NUMERO_DE_WHATSAPP?text=${encodedMessage}`;
+            const whatsappLink = `https://wa.me/5551992520046?text=${encodedMessage}`;
 
             // Abre o link do WhatsApp
             window.open(whatsappLink, '_blank');
