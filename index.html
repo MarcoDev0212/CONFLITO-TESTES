@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONFLITO FC - Inscrição</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .card {
+            background-color: #2c2c2c;
+            border: 2px solid #ff4500;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        input, select {
+            background-color: #444;
+            border: 1px solid #555;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #ff4500;
+            box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+        }
+
+        .btn {
+            background-color: #ff4500;
+            box-shadow: 0 4px 6px rgba(255, 69, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e63900;
+            box-shadow: 0 6px 8px rgba(255, 69, 0, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .footer-logo {
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div class="container max-w-xl w-full mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-white animate-pulse">
+                CONFLITO FC
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-300">Formulário de Inscrição</p>
+        </header>
+
+        <!-- Formulário Card -->
+        <div class="card p-6 md:p-8 rounded-2xl">
+            <h2 class="text-2xl md:text-3xl font-bold text-red-500 mb-6">Preencha seus Dados</h2>
+            <form id="registrationForm" class="space-y-4 md:space-y-6">
+                <div>
+                    <label for="nome" class="block text-sm md:text-base font-medium text-gray-300">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required
+                           class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
+                </div>
+
+                <div>
+                    <label for="id" class="block text-sm md:text-base font-medium text-gray-300">ID:</label>
+                    <input type="text" id="id" name="id" required
+                           class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
+                </div>
+
+                <div>
+                    <label for="plataforma" class="block text-sm md:text-base font-medium text-gray-300">Plataforma:</label>
+                    <select id="plataforma" name="plataforma" required
+                            class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
+                        <option value="">Selecione uma plataforma</option>
+                        <option value="PS5">PS5</option>
+                        <option value="XBOX">XBOX</option>
+                        <option value="PC">PC</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="idade" class="block text-sm md:text-base font-medium text-gray-300">Idade</label>
+                    <select id="idade" name="idade" required
+                            class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
+                        <option value="">Selecione sua idade</option>
+                        <!-- Gerar opções de 20 a 50 anos -->
+                        <script>
+                            for (let i = 20; i <= 50; i++) {
+                                document.write(`<option value="${i}">${i} anos</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="discord" class="block text-sm md:text-base font-medium text-gray-300">Tem Discord?</label>
+                    <select id="discord" name="discord" required
+                            class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
+                        <option value="">Selecione</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="diaDaSemana" class="block text-sm md:text-base font-medium text-gray-300">Dia da Semana</label>
+                    <select id="diaDaSemana" name="diaDaSemana" required
+                            class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
+                        <option value="">Selecione um dia</option>
+                        <option value="Segunda-feira">Segunda-feira</option>
+                        <option value="Terça-feira">Terça-feira</option>
+                        <option value="Quarta-feira">Quarta-feira</option>
+                        <option value="Quinta-feira">Quinta-feira</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="horario" class="block text-sm md:text-base font-medium text-gray-300">Horário</label>
+                    <select id="horario" name="horario" required
+                           class="mt-1 block w-full rounded-md p-2 md:p-3 border border-gray-600 focus:ring-red-500 focus:border-red-500 shadow-sm">
+                        <option value="">Selecione um horário</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="21:00">21:00</option>
+                    </select>
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit"
+                            class="btn w-full flex justify-center py-3 px-4 rounded-full text-base md:text-lg font-bold text-white uppercase">
+                        Enviar para o WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 text-center text-gray-400">
+            <p class="footer-logo text-sm md:text-base">CONFLITO FC</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Pega os valores dos campos do formulário
+            const nome = document.getElementById('nome').value;
+            const id = document.getElementById('id').value;
+            const plataforma = document.getElementById('plataforma').value;
+            const idade = document.getElementById('idade').value;
+            const discord = document.getElementById('discord').value;
+            const diaDaSemana = document.getElementById('diaDaSemana').value;
+            const horario = document.getElementById('horario').value;
+
+            // Formata a mensagem para o WhatsApp
+            const message = `
+*Nova Inscrição - CONFLITO FC*
+
+*Nome:* ${nome}
+*ID:* ${id}
+*Plataforma:* ${plataforma}
+*Idade:* ${idade}
+*Tem Discord?:* ${discord}
+*Dia da Semana:* ${diaDaSemana}
+*Horário:* ${horario}
+
+*Mensagem enviada via site.*
+            `.trim(); // Remove espaços em branco no início e no fim
+
+            // Codifica a mensagem para a URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // Substitua 'SEU_NUMERO_OU_ID_DO_GRUPO' pelo número de telefone de destino (com código do país, ex: 5511987654321)
+            // Para grupos, a API oficial do WhatsApp não permite enviar diretamente para um grupo.
+            // A forma mais comum é enviar para um número de contato que gerencia as inscrições.
+            // Para um link que funciona em celulares e desktops, use a API wa.me.
+            const whatsappLink = `https://wa.me/5551992520046?text=${encodedMessage}`;
+
+            // Abre o link do WhatsApp
+            window.open(whatsappLink, '_blank');
+        });
+    </script>
+</body>
+</html>
+
